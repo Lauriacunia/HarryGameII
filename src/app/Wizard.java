@@ -98,12 +98,13 @@ public class Wizard extends Persona implements IHaceMagia {
 
     @Override
     public void atacar(Personaje victima, Hechizo hechizo) {
+
         
-        victima.setSalud(victima.getSalud() - (hechizo.getPoderDeDanio() + (int)victima.getArtefacto().getAmplificadorDeDanio())); 
+        victima.setSalud(victima.getSalud() - hechizo.getPoderDeDanio()); 
         System.out.println("---------------------------------------------------------------------------------------------------------");
         System.out.println("Usaste el hechizo " + hechizo.getNombreDelPoder());
         System.out.println("                                                                                                 ");
-        System.out.println("Lograste debilitar a tu oponente restandole: " + (hechizo.getPoderDeDanio() + (int)victima.getArtefacto().getAmplificadorDeDanio()) + " puntos a su salud.");
+        System.out.println("Lograste debilitar a tu oponente restandole: " + hechizo.getPoderDeDanio()  + " puntos a su salud.");
         System.out.println("                                                                                                 ");
         System.out.println("---------------------------------------------------------------------------------------------------------");
 
@@ -117,12 +118,13 @@ public class Wizard extends Persona implements IHaceMagia {
                he = h;
             }
            
-        }   
-        victima.setSalud(victima.getSalud() - (he.getPoderDeDanio() + (int)victima.getArtefacto().getAmplificadorDeDanio())); 
+        }  
+         
+        victima.setSalud(victima.getSalud() - he.getPoderDeDanio()); 
         System.out.println("---------------------------------------------------------------------------------------------------------");
         System.out.println("Usaste el hechizo " + he.getNombreDelPoder());
         System.out.println("                                                  ");
-        System.out.println("Lograste debilitar a tu oponente restandole: " + (he.getPoderDeDanio() + (int)victima.getArtefacto().getAmplificadorDeDanio())+ " puntos a su salud.");
+        System.out.println("Lograste debilitar a tu oponente restandole: " + he.getPoderDeDanio() + " puntos a su salud.");
         System.out.println("                                                                                                 ");
         System.out.println("---------------------------------------------------------------------------------------------------------"); 
     }

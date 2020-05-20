@@ -73,11 +73,11 @@ public class Elfo extends Criatura implements IHaceMagia {
 
     @Override
     public void atacar(Personaje personaje, Hechizo hechizo) {
-        personaje.setSalud(personaje.getSalud() - (hechizo.getPoderDeDanio() + (int)personaje.getArtefacto().getAmplificadorDeDanio())); 
+        personaje.setSalud(personaje.getSalud() - (hechizo.getPoderDeDanio())); 
         System.out.println("-----------------------------------------------------------------------------");
         System.out.println("Usaste el hechizo " + hechizo.getNombreDelPoder());
         System.out.println("                                       ");
-        System.out.println("Lograste debilitar a tu oponente restandole: " + (hechizo.getPoderDeDanio() + (int)personaje.getArtefacto().getAmplificadorDeDanio()) + " puntos a su salud.");
+        System.out.println("Lograste debilitar a tu oponente restandole: " + (hechizo.getPoderDeDanio()) + " puntos a su salud.");
         System.out.println("                                       ");
         System.out.println("-----------------------------------------------------------------------------"); 
     }
@@ -93,9 +93,9 @@ public class Elfo extends Criatura implements IHaceMagia {
         }   
         personaje.setSalud(personaje.getSalud() - he.getPoderDeDanio()); 
         System.out.println("--------------------------------------------------------------------------------------------");
-        System.out.println("Usaste el hechizo " + (he.getPoderDeDanio() + (int)personaje.getArtefacto().getAmplificadorDeDanio()));
+        System.out.println("Usaste el hechizo " + (he.getPoderDeDanio()));
         System.out.println("                                "); 
-        System.out.println("Lograste debilitar a tu oponente restandole: " + (he.getPoderDeDanio() + (int)personaje.getArtefacto().getAmplificadorDeDanio()) + " puntos a su salud.");
+        System.out.println("Lograste debilitar a tu oponente restandole: " + (he.getPoderDeDanio()) + " puntos a su salud.");
         System.out.println("                                "); 
         System.out.println("--------------------------------------------------------------------------------------------");
 
