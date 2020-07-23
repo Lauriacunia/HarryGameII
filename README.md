@@ -1,4 +1,4 @@
-# HarryGame_OOP
+# HarryGame
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/63796774/88337426-1a6f6b80-cd0d-11ea-8c3a-ed1801a30de3.gif">
